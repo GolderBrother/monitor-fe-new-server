@@ -52,7 +52,9 @@ export default class Index extends BaseService {
   /** 无头浏览器 */
   launch = {
     headless: true,
+    args: ['--disable-setuid-sandbox', '--no-sandbox']
   };
+  
   args = ["--no-sandbox", "--disable-setuid-sandbox"];
   /** 模拟浏览器版本信息 */
   userAgent =
