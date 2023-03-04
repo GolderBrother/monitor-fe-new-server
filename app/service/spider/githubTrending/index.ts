@@ -24,6 +24,7 @@ export default class Index extends BaseService {
     $('.position-relative article.Box-row').each((index, ele) => {
       const linkDom = $(ele).find('.lh-condensed a');
       // const title = linkDom.text().trim();
+      if (!linkDom) return;
       const title = linkDom.text().replace(/\s*/g,"");
       const href = `${this.DOMAIN}${linkDom.attr('href')}`;
       if (title && href) {

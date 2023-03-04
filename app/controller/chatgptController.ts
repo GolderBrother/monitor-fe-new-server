@@ -75,16 +75,16 @@ export default class ChatgptController extends Controller {
   }
 
   async ask() {
-    const { request, helper, axios, logger } = this.ctx;
+    const { request, helper: _helper, axios, logger } = this.ctx;
     const { message } = request.body;
     logger.info("requset body===", request.body);
 
     logger.info("message===", message);
     //   openai上申请到的token
-    const token = "";
-    const config = {
-      headers: { Authorization: `Bearer ${token}` },
-    };
+    // const token = "";
+    // const config = {
+    //   headers: { Authorization: `Bearer ${token}` },
+    // };
     const req = {
       model: "text-curie-001",
       prompt: message,
