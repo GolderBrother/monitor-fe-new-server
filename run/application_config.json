@@ -102,25 +102,25 @@
     "onerror": {
       "errorPageUrl": "",
       "appErrorFilter": null,
-      "templatePath": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg-onerror/lib/onerror_page.mustache"
+      "templatePath": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg-onerror/lib/onerror_page.mustache"
     },
     "i18n": {
       "defaultLocale": "en_US",
       "dirs": [
-        "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg-session/config/locales",
-        "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg-security/config/locales",
-        "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg-jsonp/config/locales",
-        "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg-onerror/config/locales",
-        "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg-i18n/config/locales",
-        "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg-watcher/config/locales",
-        "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg-schedule/config/locales",
-        "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg-multipart/config/locales",
-        "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg-development/config/locales",
-        "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg-logrotator/config/locales",
-        "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg-static/config/locales",
-        "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg-view/config/locales",
-        "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg/config/locales",
-        "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/config/locales"
+        "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg-session/config/locales",
+        "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg-security/config/locales",
+        "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg-jsonp/config/locales",
+        "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg-onerror/config/locales",
+        "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg-i18n/config/locales",
+        "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg-watcher/config/locales",
+        "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg-schedule/config/locales",
+        "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg-multipart/config/locales",
+        "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg-logrotator/config/locales",
+        "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg-static/config/locales",
+        "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg-view/config/locales",
+        "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg-axios-plus/config/locales",
+        "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg/config/locales",
+        "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/config/locales"
       ],
       "queryField": "locale",
       "cookieField": "locale",
@@ -129,10 +129,10 @@
       "functionName": "__"
     },
     "watcher": {
-      "type": "development",
+      "type": "default",
       "eventSources": {
-        "default": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg-watcher/lib/event-sources/default",
-        "development": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg-watcher/lib/event-sources/development"
+        "default": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg-watcher/lib/event-sources/default",
+        "development": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg-watcher/lib/event-sources/development"
       }
     },
     "customLogger": {
@@ -162,14 +162,6 @@
         "disable": false
       }
     },
-    "development": {
-      "watchDirs": [],
-      "ignoreDirs": [],
-      "fastReady": false,
-      "reloadOnDebug": true,
-      "overrideDefault": false,
-      "overrideIgnore": false
-    },
     "logrotator": {
       "filesRotateByHour": null,
       "hourDelimiter": "-",
@@ -181,20 +173,31 @@
     },
     "static": {
       "prefix": "/public/",
-      "dir": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/app/public",
+      "dir": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/app/public",
       "dynamic": true,
       "preload": false,
-      "buffer": false,
-      "maxFiles": 1000
+      "buffer": true,
+      "maxFiles": 1000,
+      "maxAge": 31536000
     },
     "view": {
-      "root": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/app/view",
-      "cache": false,
+      "root": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/app/view",
+      "cache": true,
       "defaultExtension": ".html",
       "defaultViewEngine": "",
       "mapping": {}
     },
-    "env": "local",
+    "axiosPlus": {
+      "headers": {
+        "common": {
+          "Content-Type": "application/json; charset=UTF-8"
+        }
+      },
+      "timeout": 5000,
+      "app": true,
+      "agent": false
+    },
+    "env": "prod",
     "name": "monitor-news-server",
     "keys": "<String len: 38>",
     "cookies": {},
@@ -231,6 +234,7 @@
         "axios": "^1.1.2",
         "cheerio": "^1.0.0-rc.12",
         "egg": "^2.6.1",
+        "egg-axios-plus": "^3.1.3",
         "egg-scripts": "^2.6.0",
         "moment": "^2.29.4",
         "node-schedule": "^2.1.0",
@@ -266,9 +270,9 @@
       "author": "jamesezhang",
       "license": "MIT"
     },
-    "baseDir": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server",
+    "baseDir": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server",
     "HOME": "/Users/zhangyaohuang",
-    "rundir": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/run",
+    "rundir": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/run",
     "dump": {
       "ignore": "<Set>"
     },
@@ -301,21 +305,19 @@
       "returnRawBody": true
     },
     "logger": {
-      "dir": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/logs/monitor-news-server",
+      "dir": "/Users/zhangyaohuang/logs/monitor-news-server",
       "encoding": "utf8",
-      "env": "local",
+      "env": "prod",
       "level": "INFO",
       "consoleLevel": "INFO",
-      "disableConsoleAfterReady": false,
+      "disableConsoleAfterReady": true,
       "outputJSON": false,
       "buffer": true,
       "appLogName": "monitor-news-server-web.log",
       "coreLogName": "egg-web.log",
       "agentLogName": "egg-agent.log",
       "errorLogName": "common-error.log",
-      "coreLogger": {
-        "consoleLevel": "WARN"
-      },
+      "coreLogger": {},
       "allowDebugAtProd": false,
       "enablePerformanceTimer": false,
       "type": "application"
@@ -353,8 +355,7 @@
       "overrideMethod",
       "session",
       "securities",
-      "i18n",
-      "eggLoaderTrace"
+      "i18n"
     ],
     "workerStartTimeout": 600000,
     "serverTimeout": null,
@@ -399,8 +400,8 @@
         "jsonp"
       ],
       "env": [],
-      "from": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg/config/plugin.js",
-      "path": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg-onerror",
+      "from": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg/config/plugin.js",
+      "path": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg-onerror",
       "version": "2.1.1"
     },
     "session": {
@@ -410,8 +411,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg/config/plugin.js",
-      "path": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg-session",
+      "from": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg/config/plugin.js",
+      "path": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg-session",
       "version": "3.3.0"
     },
     "i18n": {
@@ -421,8 +422,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg/config/plugin.js",
-      "path": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg-i18n",
+      "from": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg/config/plugin.js",
+      "path": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg-i18n",
       "version": "2.1.1"
     },
     "watcher": {
@@ -432,8 +433,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg/config/plugin.js",
-      "path": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg-watcher",
+      "from": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg/config/plugin.js",
+      "path": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg-watcher",
       "version": "3.1.1"
     },
     "multipart": {
@@ -445,8 +446,8 @@
         "schedule"
       ],
       "env": [],
-      "from": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg/config/plugin.js",
-      "path": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg-multipart",
+      "from": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg/config/plugin.js",
+      "path": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg-multipart",
       "version": "2.13.1"
     },
     "security": {
@@ -458,12 +459,12 @@
         "session"
       ],
       "env": [],
-      "from": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg/config/plugin.js",
-      "path": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg-security",
+      "from": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg/config/plugin.js",
+      "path": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg-security",
       "version": "2.11.0"
     },
     "development": {
-      "enable": true,
+      "enable": false,
       "package": "egg-development",
       "name": "development",
       "dependencies": [
@@ -473,8 +474,8 @@
       "env": [
         "local"
       ],
-      "from": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg/config/plugin.js",
-      "path": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg-development",
+      "from": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg/config/plugin.js",
+      "path": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg-development",
       "version": "2.7.0"
     },
     "logrotator": {
@@ -486,8 +487,8 @@
       ],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg/config/plugin.js",
-      "path": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg-logrotator",
+      "from": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg/config/plugin.js",
+      "path": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg-logrotator",
       "version": "3.1.0"
     },
     "schedule": {
@@ -497,8 +498,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg/config/plugin.js",
-      "path": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg-schedule",
+      "from": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg/config/plugin.js",
+      "path": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg-schedule",
       "version": "3.7.0"
     },
     "static": {
@@ -508,8 +509,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg/config/plugin.js",
-      "path": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg-static",
+      "from": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg/config/plugin.js",
+      "path": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg-static",
       "version": "2.2.0"
     },
     "jsonp": {
@@ -521,8 +522,8 @@
         "security"
       ],
       "env": [],
-      "from": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg/config/plugin.js",
-      "path": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg-jsonp",
+      "from": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg/config/plugin.js",
+      "path": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg-jsonp",
       "version": "2.0.0"
     },
     "view": {
@@ -532,15 +533,26 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg/config/plugin.js",
-      "path": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server/node_modules/egg-view",
+      "from": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg/config/plugin.js",
+      "path": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg-view",
       "version": "2.1.3"
+    },
+    "axios": {
+      "enable": true,
+      "package": "egg-axios-plus",
+      "name": "axios",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/config/plugin.js",
+      "path": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server/node_modules/egg-axios-plus",
+      "version": "3.1.3"
     }
   },
   "appInfo": {
     "name": "monitor-news-server",
-    "baseDir": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server",
-    "env": "local",
+    "baseDir": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-news-server",
+    "env": "prod",
     "HOME": "/Users/zhangyaohuang",
     "pkg": {
       "name": "monitor-news-server",
@@ -569,6 +581,7 @@
         "axios": "^1.1.2",
         "cheerio": "^1.0.0-rc.12",
         "egg": "^2.6.1",
+        "egg-axios-plus": "^3.1.3",
         "egg-scripts": "^2.6.0",
         "moment": "^2.29.4",
         "node-schedule": "^2.1.0",
@@ -602,6 +615,6 @@
       "author": "jamesezhang",
       "license": "MIT"
     },
-    "root": "/Users/zhangyaohuang/Desktop/james/self/code/monitor-chihewanle/server"
+    "root": "/Users/zhangyaohuang"
   }
 }

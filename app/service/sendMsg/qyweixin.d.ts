@@ -8,6 +8,7 @@ export default class Index extends BaseService {
      * @param bizType 业务类型
      */
     getQYWeiXinWebHookUrl(): string;
+    generateMarkdownContent(content: any): string;
     index(content: any): Promise<{
         data: any;
         result: boolean;

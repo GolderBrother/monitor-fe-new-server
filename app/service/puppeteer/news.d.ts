@@ -10,6 +10,7 @@ export default class Index extends BaseService {
     /** 无头浏览器 */
     launch: {
         headless: boolean;
+        args: string[];
     };
     args: string[];
     /** 模拟浏览器版本信息 */

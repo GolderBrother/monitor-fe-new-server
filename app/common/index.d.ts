@@ -1,15 +1,19 @@
 export declare enum EBizType {
     /** 牛客:https://www.nowcoder.com/ */
     NEWCODER = "newcoder",
-    /** 稀土掘金:https://juejin.cn/ */
+    /** 稀土掘金前端:https://juejin.cn/ */
     JUEJIN = "juejin",
+    JUEJINNode = "juejinNode",
     /** segmentfault: https://segmentfault.com/ */
     SEGMENTFAULT = "segmentfault",
     /** 知乎: https://www.zhihu.com/ */
     ZHIHU = "zhihu",
+    /** github trending: https://github.com/trending/javascript */
+    GITHUB_TRENDING = "githubTrending",
     /** github issues */
     GITHUBISSUES = "githubIssues",
-    MEITUAN = "MEITUAN"
+    /** 美团外卖: https://h5.waimai.meituan.com/waimai/mindex/home */
+    MEITUAN = "meituan"
 }
 /**
  * 企业微信群机器人Token

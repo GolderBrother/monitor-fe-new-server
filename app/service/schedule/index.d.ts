@@ -1,9 +1,9 @@
 import BaseService from '../baseService';
+import { EBizType } from '../../common';
 export default class Index extends BaseService {
     /**
-     * 根据业务类型进行html格式清洗
-     * @param bizType 业务类型
-     * @param html html结构
+     * 执行定时任务
+     * @param scheduleTask 定时任务
      */
-    formatHtmlByBizType(bizType: string, html: string): Link[] | undefined;
+    scheduleHandler(scheduleTask: Function, bizType: EBizType): Promise<void>;
 }
