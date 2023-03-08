@@ -1,14 +1,14 @@
 import schedule from "node-schedule";
 // 每天早上 8 点执行
 const JueJinFERecurrenceRule = new schedule.RecurrenceRule();
-// JueJinFERecurrenceRule.hour = [8];
-// JueJinFERecurrenceRule.minute = 0;
+JueJinFERecurrenceRule.hour = [8];
+JueJinFERecurrenceRule.minute = 0;
 JueJinFERecurrenceRule.second = 0;
 
 // 每天早上 8：15 执行
 const JueJinNodeRecurrenceRule = new schedule.RecurrenceRule();
 JueJinNodeRecurrenceRule.hour = [8];
-JueJinNodeRecurrenceRule.minute = 0;
+JueJinNodeRecurrenceRule.minute = 15;
 JueJinNodeRecurrenceRule.second = 0;
 
 // 每天早上 8:30 执行
@@ -25,9 +25,9 @@ ZhihuFERecurrenceRule.second = 0;
 
 // 每天早上 9:30 执行
 const GithubTrendingFERecurrenceRule = new schedule.RecurrenceRule();
-ZhihuFERecurrenceRule.hour = [9];
-ZhihuFERecurrenceRule.minute = 30;
-ZhihuFERecurrenceRule.second = 0;
+GithubTrendingFERecurrenceRule.hour = [9];
+GithubTrendingFERecurrenceRule.minute = 30;
+GithubTrendingFERecurrenceRule.second = 0;
 
 /**
  * 爬虫站点枚举
