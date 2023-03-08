@@ -10,6 +10,7 @@
   "scripts": {
     "start": "npm run tsc && egg-scripts start --daemon --title=egg-server-monitor-news-server",
     "stop": "egg-scripts stop --title=egg-server-monitor-news-server",
+    "build": "npm run tsc && npm run stop && npm run start",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
     "test-local": "egg-bin test",
